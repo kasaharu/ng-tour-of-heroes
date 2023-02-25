@@ -1,27 +1,33 @@
-# NgTourOfHeroes
+# Ng Tour of Heroes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+これは以下のバージョンで新規に作成した Angular プロジェクトに公式チュートリアル [Tour of Heroes](https://angular.jp/tutorial/tour-of-heroes/toh-pt6) 完成形のソースコードをダウンロードし、src/app/ 配下にコピーしたものです。
 
-## Development server
+```
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Angular CLI: 15.0.5
+Node: 18.14.0
+Package Manager: npm 9.3.1
+OS: darwin x64
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular: 15.2.0
+... animations, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1502.0
+@angular-devkit/build-angular   15.2.0
+@angular-devkit/core            15.2.0
+@angular-devkit/schematics      15.0.5
+@angular/cli                    15.0.5
+@schematics/angular             15.0.5
+rxjs                            7.5.7
+typescript                      4.8.4
+```
