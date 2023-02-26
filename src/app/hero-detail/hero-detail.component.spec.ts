@@ -1,30 +1,36 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActivatedRoute } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRouteStub } from '../../testing/activated-route-stub';
+import { TestBed } from '@angular/core/testing';
+import {
+  RouterTestingHarness,
+  RouterTestingModule,
+} from '@angular/router/testing';
+import { routes } from '../app-routing.module';
 import { HeroDetailComponent } from './hero-detail.component';
 
 describe('HeroDetailComponent', () => {
+  let harness: RouterTestingHarness;
   let component: HeroDetailComponent;
-  let fixture: ComponentFixture<HeroDetailComponent>;
-  let activatedRoute: ActivatedRouteStub;
 
   beforeEach(async () => {
-    activatedRoute = new ActivatedRouteStub({ id: 1 });
-
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientTestingModule],
+      imports: [
+        RouterTestingModule.withRoutes(routes),
+        HttpClientTestingModule,
+      ],
       declarations: [HeroDetailComponent],
-      providers: [{ provide: ActivatedRoute, useValue: activatedRoute }],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HeroDetailComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    harness = await RouterTestingHarness.create();
+    component = await harness.navigateByUrl('detail/1', HeroDetailComponent);
+
+    harness.detectChanges();
   });
 
-  it('should create the app', () => {
+  it('should create the app', async () => {
+    // expect(component).toBeTruthy();
+
+    await harness.navigateByUrl('detail/10');
+    harness.detectChanges();
     expect(component).toBeTruthy();
   });
 });
